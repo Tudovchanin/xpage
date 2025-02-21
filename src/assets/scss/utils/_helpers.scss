@@ -1,0 +1,5 @@
+@mixin hover-and-pointer {
+  @media (any-hover: hover) and (any-pointer: fine) {
+    @content;
+  }
+}

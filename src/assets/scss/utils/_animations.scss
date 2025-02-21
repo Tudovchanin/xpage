@@ -1,0 +1,55 @@
+// animations.scss
+
+@keyframes move-x {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(10vw);
+  }
+}
+
+@keyframes glow-v1 {
+  0% {
+      text-shadow:
+          0 0 5px rgba(30, 144, 255, 0.5),
+          0 0 10px rgba(30, 144, 255, 0.5),
+          0 0 15px rgba(106, 90, 205, 0.5),
+          0 0 20px rgba(255, 69, 0, 0.5),
+          0 0 25px rgba(255, 0, 255, 0.5);
+  }
+  50% {
+      text-shadow:
+          0 0 10px rgba(30, 144, 255, 1),
+          0 0 20px rgba(30, 144, 255, 1),
+          0 0 30px rgba(106, 90, 205, 1),
+          0 0 40px rgba(255, 69, 0, 1),
+          0 0 50px rgba(255, 0, 255, 1);
+  }
+  100% {
+      text-shadow:
+          0 0 5px rgba(30, 144, 255, 0.5),
+          0 0 10px rgba(30, 144, 255, 0.5),
+          0 0 15px rgba(106, 90, 205, 0.5),
+          0 0 20px rgba(255, 69, 0, 0.5),
+          0 0 25px rgba(255, 0, 255, 0.5);
+  }
+}
+
+@keyframes rotate {
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes box-glow-v2 {
+  0% {
+      box-shadow: 0 0 10px 10px #003366;
+  }
+  50% {
+      box-shadow: 0 0 25px 20px #003366;
+  }
+  100% {
+      box-shadow: 0 0 10px 10px #003366;
+  }
+}

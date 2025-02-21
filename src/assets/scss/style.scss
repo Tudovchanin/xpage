@@ -1,0 +1,58 @@
+@use './utils/variables';
+@use './utils/mediaMixins' as *;
+@use './utils/reset';
+@use './utils/fonts';
+@use './utils/animations';
+@use './utils/helpers';
+
+
+@use './blocks/common_blocks.scss';
+
+@use './sections/header';
+@use './sections/section-hero';
+@use './sections/section-play';
+@use './sections/section-learn';
+@use './sections/footer';
+
+
+body {
+  min-height: 100vh;
+  background-color: rgb(236, 236, 236);
+}
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  margin-bottom: 120px;
+
+  @include max_1279 {
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+  
+  @include max_480 {
+    gap: 42px;
+    margin-bottom: 42px;
+  }
+}
+
+.padding-page {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include max_430 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.width-page {
+  max-width: 1920px;
+}
+
+.x-center {
+  margin-left: auto;
+  margin-right: auto;
+}

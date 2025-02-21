@@ -1,0 +1,123 @@
+@use '../utils/helpers' as *;
+@use '../utils/mediaMixins' as *;
+
+.pill-item {
+  padding: 7px 12px;
+  border-radius: 38px;
+  width: max-content;
+  font-family: DrukWideCyr;
+  font-size: clamp(0.625rem, 0.6rem + 0.125vw, 0.75rem);
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.sub-title-common {
+  font-size: clamp(1.25rem, 0.9rem + 1.75vw, 3rem);
+  color: rgb(255, 255, 255);
+  font-family: DrukWideCyr;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.link-common {
+  font-family: DrukWideCyr;
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+
+
+
+  &::after {
+    display: inline-block;
+    content: '';
+    width: 22px;
+    height: 15px;
+    margin-left: 13px;
+    background-image: url('../img/arrow.svg');
+  }
+
+  &--arrow-hover {
+
+    &::after {
+      opacity: 0;
+      filter: blur(20px);
+      transition: opacity .5s, filter .3s linear;
+    }
+
+    @include hover-and-pointer {
+      transition: opacity .3s;
+
+      &:hover::after {
+        opacity: 1;
+        filter: blur(0);
+      }
+    }
+  }
+}
+
+.quote {
+  color: rgb(32, 32, 32);
+  font-family: DrukWideCyr;
+  font-size: clamp(0.625rem, 0.5rem + 0.4167vw, 1rem);
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.quote-date {
+  background-color: rgb(239, 239, 239);
+  color: rgb(32, 32, 32);
+}
+
+
+
+
+// блок helpers
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  &__title {
+    color: rgb(32, 32, 32);
+    font-family: DrukWideCyr;
+    font-size: clamp(1.625rem, 0.95rem + 3.375vw, 5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    align-self: flex-end;
+    color: rgb(243, 103, 34);
+
+    &::after {
+      filter: brightness(0) saturate(100%) invert(46%) sepia(81%) saturate(1987%) hue-rotate(347deg) brightness(98%) contrast(94%);
+
+      @include max_480 {
+        display: none;
+      }
+    }
+
+    &--green {
+      color: rgb(46, 141, 67);
+
+
+      &::after {
+        filter: brightness(0) saturate(100%) invert(42%) sepia(72%) saturate(420%) hue-rotate(81deg) brightness(92%) contrast(91%);
+      }
+    }
+
+    @include hover-and-pointer {
+      transition: transform .5s, opacity 1s;
+      &:hover {
+        transform: translateX(10px);
+        opacity: .7;
+      }
+    }
+  }
+}
