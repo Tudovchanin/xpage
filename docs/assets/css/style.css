@@ -758,6 +758,7 @@ h1, h2, h3, h4, h5, h6, p {
     .section-play__list-item:hover .section-play__wrapper-link {
         transform: translateY(94px);
         background-color: black;
+        z-index: 50;
     }
 }
 
@@ -1368,4 +1369,9 @@ body {
 .x-center {
     margin-left: auto;
     margin-right: auto;
+}
+
+.z-100 {
+    position: relative;
+    z-index: 100;
 }

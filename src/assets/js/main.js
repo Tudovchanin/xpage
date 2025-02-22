@@ -128,26 +128,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initBurger();
 
 
-  const initCardsPlayState = () => {
-    const  $cardsLink = document.querySelectorAll('.section-play__list-link');
-
-
-  const $cardsPlay = document.querySelectorAll('.section-play__list-item');
-  $cardsLink.forEach(element => {
-    element.addEventListener('mouseenter', (e)=> {
-      e.target.classList.add('button-common--active');
-    })
-  });
-
-  $cardsLink.forEach(element => {
-    element.addEventListener('mouseleave', (e)=> {
-      e.target.classList.remove('button-common--active');
-    })
-  })
-
-  };
-
-  initCardsPlayState();
-
 })
 

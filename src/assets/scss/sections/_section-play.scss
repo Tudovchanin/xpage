@@ -45,6 +45,7 @@
       &:hover .section-play__wrapper-link {
         transform: translateY(94px);
         background-color: black;
+        z-index: 50;
       }
     }
   }
